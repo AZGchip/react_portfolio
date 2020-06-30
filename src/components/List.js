@@ -15,7 +15,29 @@ const listData = [
          My role: JavaScript
         </p>`,
         github: "https://github.com/AZGchip/Ales-and-Trales",
-        deployed: "https://azgchip.github.io/Ales-and-Trales/"
+        deployed: "https://azgchip.github.io/Ales-and-Trales/",
+        collaborators: [
+            {
+                name: "Andrew Zinski",
+                github:"https://github.com/AZGchip",
+                role: "javascript/API"
+            },
+            {
+                name: "Emilia Hartline",
+                github:"https://github.com/emijoha",
+                role: "HTML/CSS"
+            },
+            {
+                name: "Paul Houser",
+                github:"https://github.com/paul-houser3333",
+                role: "HTML/CSS"
+            },
+            {
+                name: "Daniel Abell",
+                github:"https://github.com/dmabell693",
+                role: "javascript/API"
+            },
+        ]
     },
     {
         id: 2,
@@ -58,16 +80,39 @@ const listData = [
         deployed: "https://desolate-everglades-68515.herokuapp.com/"
     },
 ]
+function collabList(data){
+    let collab;
+    if (data.collaborators){
+        collab =  data.collaborators.map(person => (
+          <span><a href={person.github}>{person.name}</a>: {person.role}  <span className="text-secondary">|</span> </span>  
+        ))
+    }
+    else{
+        collab = "By Andrew Zinski"
+    }
+    return collab  
+}
 function List() {
+    
     let listCards = listData.map(list => (
-        <div>
-            <img src={list.image} alt={list.alt}></img>
-            <h1>{list.title}</h1>
-            <p>{list.summary}</p>
-            <p>{list.description}</p>
-            <button href={list.github}>Github</button>
-            <button href={list.deployed}>deployed</button>
-        </div>
+            <div className="card mt-3">
+                <div className="row no-gutters">
+                    <div className="col-auto">
+                        <img src={list.image} className="img-fluid " style={{height:400}}alt=""></img>
+                    </div>
+                    <div className="col">
+                        <div className="card-block px-2">
+                            <h4 className="card-title">{list.title}</h4>
+                            <p className="card-text">{list.summary}</p>
+                            <a href={list.github} className="btn btn-primary">Github</a>
+                            <a href={list.deployed} className="btn btn-primary">Deployed</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="card-footer w-100 ">
+                    {collabList(list)}
+                </div>
+            </div>
     ))
     return <div className="container">
         {listCards}
