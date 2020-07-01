@@ -115,7 +115,10 @@ function List() {
             </div>
     ))
     return <div className="container">
+        <div className="mt-5 pt-5">
         {listCards}
+        </div>
+        
     </div>
 }
 
