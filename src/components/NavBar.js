@@ -3,7 +3,13 @@ import React from "react";
 function NavBar(props) {
 	return (
 		<div className="container navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow p-3 mb-5 ">
-		<ul className="navbar-nav ml-auto flex-nowrap">
+			<h3 className="text-light">Andrew Zinski</h3>
+			
+  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navcollapse"
+    aria-controls="navcollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i
+        class=""></i></span></button>
+		<div className="collapse navbar-collapse" id="navcollapse">
+		<ul className="navbar-nav ml-auto flex-nowrap ">
 		  <li className="nav-item">
 			<a
 			  href="#home"
@@ -34,6 +40,7 @@ function NavBar(props) {
 			</a>
 		  </li>
 		</ul>
+		</div>
 		</div>
 	  );
 	}
