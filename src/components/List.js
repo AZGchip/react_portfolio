@@ -99,14 +99,16 @@ function List() {
         <div className="card mt-3">
             <div className="row no-gutters">
                 <div className="col-auto">
-                    <img src={list.image} className="img-fluid " style={{ height: 300 }} alt=""></img>
+                    <img src={list.image} className="img-fluid " style={{ height: 300 }} alt=""></img><br></br>
+                    <a href={list.github} className="btn btn-info m-1">Github</a>
+                        <a href={list.deployed} className="btn btn-primary ml-2 m-1">Deployed</a>
                 </div>
-                <div className="col">
+                <div className="col-md">
                     <div className="card-block px-2">
+                        
                         <h4 className="card-title">{list.title}</h4>
                         <p className="card-text">{list.summary}</p>
-                        <a href={list.github} className="btn btn-primary">Github</a>
-                        <a href={list.deployed} className="btn btn-primary">Deployed</a>
+                        
                     </div>
                 </div>
             </div>

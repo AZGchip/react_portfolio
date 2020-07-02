@@ -4,7 +4,7 @@ function NavBar(props) {
 	return (
 		<div className="container navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow p-3 mb-5 ">
 			<h3 className="text-light">Andrew Zinski</h3>
-			
+			{/*navbar hamburger  */}
   <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navcollapse"
     aria-controls="navcollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i
         class=""></i></span></button>
@@ -19,7 +19,7 @@ function NavBar(props) {
 			  Home
 			</a>
 		  </li>
-		  <li className="nav-item nav-link">|</li>
+		  <li className="nav-item nav-link d-none d-lg-block">|</li>
 		  <li className="nav-item">
 			<a
 			  href="#about"
@@ -29,7 +29,7 @@ function NavBar(props) {
 			  About
 			</a>
 		  </li>
-		  <li className="nav-item nav-link">|</li>
+		  <li className="nav-item nav-link d-none d-lg-block">|</li>
 		  <li className="nav-item">
 			<a
 			  href="#contact"
