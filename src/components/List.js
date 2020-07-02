@@ -35,6 +35,43 @@ const listData = [
     },
     {
         id: 2,
+        image: "../assets/images/hikehire.png",
+        alt: "hike hire image",
+        title: "Hike Hire (Collab)",
+        summary: "A full stack website created to connect hikers with trail guides.",
+        description: " Users can use this website to search trail locations and find guides assosiated with with each listed trail. trail guides have profiles stored in the database that are joined with basic trail information when a guide adds a searched trail to his profile. if the trail is not stored in the database, it is added before the user is linked to the trail with a many to many join. This project uses jquery, MySQL,express,node,cloudinary, leaflet, nominatum, and bulma. ",
+        github: "https://github.com/AZGchip/Trales-AlesV2",
+        deployed: "https://shrouded-anchorage-20263.herokuapp.com/",
+        collaborators: [
+            {
+                name: "Andrew Zinski",
+                github: "https://github.com/AZGchip",
+                role: "Javascript"
+            },
+            {
+                name: "Emilia Hartline",
+                github: "https://github.com/emijoha",
+                role: "HTML/CSS"
+            },
+            {
+                name: "Paul Houser",
+                github: "https://github.com/paul-houser3333",
+                role: "Javascript"
+            },
+            {
+                name: "Daniel Abell",
+                github: "https://github.com/dmabell693",
+                role: "MySQL"
+            },
+            {
+                name: "Deepak Gundavaram",
+                github: "https://github.com/deepakgundavaram",
+                role: "MySQL"
+            }
+        ]
+    },
+    {
+        id: 3,
         image: "../assets/images/forcast.bmp",
         alt: "Forcast_API",
         title: "Forcast_By_API",
@@ -44,7 +81,7 @@ const listData = [
         deployed: "https://azgchip.github.io/Forcast_By_Api/"
     },
     {
-        id: 3,
+        id: 4,
         image: "../assets/images/password.bmp",
         alt: "password photo",
         title: "Password_Generator",
@@ -54,7 +91,7 @@ const listData = [
         deployed: "https://azgchip.github.io/String_Password_Generator/"
     },
     {
-        id: 4,
+        id:5,
         image: "../assets/images/schedule.bmp",
         alt: "schedule photo",
         title: "Schedule_Maker",
@@ -64,7 +101,7 @@ const listData = [
         deployed: "https://azgchip.github.io/schedule_maker/"
     },
     {
-        id: 5,
+        id: 6,
         image: "../assets/images/burger.bmp",
         alt: "burger photo",
         title: "Eat_Burger",
@@ -74,15 +111,16 @@ const listData = [
         deployed: "https://desolate-everglades-68515.herokuapp.com/"
     },
 ]
+// creates a list of collaborators using a given array of collaborator information.
 function collabList(data) {
     let collab;
     if (data.collaborators) {
         collab = data.collaborators.map(person => (
-            <span><a href={person.github}>{person.name}</a>: {person.role}  <span className="text-secondary">|</span> </span>
+            <small><a href={person.github}>{person.name}</a>: {person.role}  <span className="text-secondary">|</span> </small>
         ))
     }
     else {
-        collab = "By Andrew Zinski"
+        collab =<small>By Andrew Zinski</small> 
     }
     return collab
 }
