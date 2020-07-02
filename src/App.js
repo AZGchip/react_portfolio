@@ -4,7 +4,7 @@ import Body from "./components/Body";
 //exports navbar and body
 function App() {
   return (<div>
-    <Body className=""/>
+    <Body/>
   </div>);
 }
 

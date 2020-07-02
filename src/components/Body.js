@@ -27,7 +27,7 @@ class Portfolio extends Component {
   
     render() {
       return (
-        <div>
+        <div >
           <NavBar
             currentPage={this.state.currentPage}
             handlePageChange={this.handlePageChange}

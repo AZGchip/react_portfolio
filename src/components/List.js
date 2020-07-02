@@ -1,4 +1,5 @@
 import React from "react"
+
 const listData = [
     {
         id: 1,
@@ -19,22 +20,22 @@ const listData = [
         collaborators: [
             {
                 name: "Andrew Zinski",
-                github:"https://github.com/AZGchip",
+                github: "https://github.com/AZGchip",
                 role: "javascript/API"
             },
             {
                 name: "Emilia Hartline",
-                github:"https://github.com/emijoha",
+                github: "https://github.com/emijoha",
                 role: "HTML/CSS"
             },
             {
                 name: "Paul Houser",
-                github:"https://github.com/paul-houser3333",
+                github: "https://github.com/paul-houser3333",
                 role: "HTML/CSS"
             },
             {
                 name: "Daniel Abell",
-                github:"https://github.com/dmabell693",
+                github: "https://github.com/dmabell693",
                 role: "javascript/API"
             },
         ]
@@ -80,45 +81,62 @@ const listData = [
         deployed: "https://desolate-everglades-68515.herokuapp.com/"
     },
 ]
-function collabList(data){
+function collabList(data) {
     let collab;
-    if (data.collaborators){
-        collab =  data.collaborators.map(person => (
-          <span><a href={person.github}>{person.name}</a>: {person.role}  <span className="text-secondary">|</span> </span>  
+    if (data.collaborators) {
+        collab = data.collaborators.map(person => (
+            <span><a href={person.github}>{person.name}</a>: {person.role}  <span className="text-secondary">|</span> </span>
         ))
     }
-    else{
+    else {
         collab = "By Andrew Zinski"
     }
-    return collab  
+    return collab
 }
 function List() {
-    
+
     let listCards = listData.map(list => (
-            <div className="card mt-3">
-                <div className="row no-gutters">
-                    <div className="col-auto">
-                        <img src={list.image} className="img-fluid " style={{height:400}}alt=""></img>
-                    </div>
-                    <div className="col">
-                        <div className="card-block px-2">
-                            <h4 className="card-title">{list.title}</h4>
-                            <p className="card-text">{list.summary}</p>
-                            <a href={list.github} className="btn btn-primary">Github</a>
-                            <a href={list.deployed} className="btn btn-primary">Deployed</a>
-                        </div>
-                    </div>
+        <div className="card mt-3">
+            <div className="row no-gutters">
+                <div className="col-auto">
+                    <img src={list.image} className="img-fluid " style={{ height: 300 }} alt=""></img>
                 </div>
-                <div className="card-footer w-100 ">
-                    {collabList(list)}
+                <div className="col">
+                    <div className="card-block px-2">
+                        <h4 className="card-title">{list.title}</h4>
+                        <p className="card-text">{list.summary}</p>
+                        <a href={list.github} className="btn btn-primary">Github</a>
+                        <a href={list.deployed} className="btn btn-primary">Deployed</a>
+                    </div>
                 </div>
             </div>
-    ))
-    return <div className="container">
-        <div className="mt-5 pt-5">
-        {listCards}
+            <div className="card-footer w-100 ">
+                {collabList(list)}
+            </div>
         </div>
-        
+    ))
+    return <div className="container bg-light ">
+        <div className="row"><div className="col-md-12 mt-5 pt-5"><h1 >Portfolio</h1></div></div>
+        <div className="row">
+            <div className=" col-md-10">
+                {listCards}
+            </div>
+            <div className="col-md-2 mt-3">
+                <div className="row ">
+
+                    <a href="https://www.deviantart.com/azgchip/gallery/"><img className="icons mx-auto"
+                        src="../assets/images/Deviantart-icon.png" alt="Deviantart icon"></img></a>
+                    <a href="https://soundcloud.com/azgchip"><img className="icons mx-auto"
+                        src="assets/images/soundcloud.png" alt="sound cloud icon"></img></a>
+                    <a href="https://www.youtube.com/channel/UC42pkrN7h_DRmxSRpjuEsxw?"><img className="icons mx-auto"
+                        src="../assets/images/Media-youtube-icon.png" alt="Youtube icon"></img></a>
+                    <a href="https://github.com/AZGchip"><img className="icons mx-auto" src="assets/images/git.png"
+                        alt="github icon"></img></a>
+                    <a href="https://www.linkedin.com/in/andrew-zinski-9761751a1/"><img className="icons mx-auto"
+                        src="assets/images/linked.png" alt="linked in icon"></img></a>
+                </div>
+            </div>
+        </div>
     </div>
 }
 
