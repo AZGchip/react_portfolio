@@ -3,7 +3,7 @@ import List from "./List";
 import NavBar from "./NavBar";
 import About from "./About";
 import Contact from "./Contact";
-
+import Footer from "./Footer"
 class Portfolio extends Component {
     state = {
       currentPage: "List"
@@ -33,6 +33,7 @@ class Portfolio extends Component {
             handlePageChange={this.handlePageChange}
           />
           {this.renderPage()}
+          <Footer/>
         </div>
       );
     }
