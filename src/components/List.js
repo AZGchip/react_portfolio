@@ -7,14 +7,7 @@ const listData = [
         alt: "Ales and Trails",
         title: "Trails & Ales (Collab) ",
         summary: "A site utilizing web APIs to display the location of trails and breweries around a searched location on an interactive map.",
-        description: `<p>A collaboration with:
-        <ul>
-            <li><a href="https://github.com/emijoha">Emilia Hartline - HTML/CSS</a></li>
-            <li><a href="https://github.com/paul-houser3333">Paul Houser - HTML/CSS</a></li>
-            <li><a href="https://github.com/dmabell693">Daniel Abell - JavaScript</a></li>
-         </ul>
-         My role: JavaScript
-        </p>`,
+        description: "In this application, a location given by the user is run through Nominatum, a search engine for OpenStreetMap. The returned json containing location data is then used to call both OpenBrewery and HikingProject's API to return trail and brewery locations around the given location. using the latitude and longitude of this returned data, pins are generated onto a Leaflet map. Each generated pin contains basic information about the trail or brewery it represents.",
         github: "https://github.com/AZGchip/Ales-and-Trales",
         deployed: "https://azgchip.github.io/Ales-and-Trales/",
         collaborators: [
@@ -46,7 +39,7 @@ const listData = [
         alt: "Forcast_API",
         title: "Forcast_By_API",
         summary: " A website that displays weather information of a searched location using OpenWeather's API. Previous searches are stored in local storage.",
-        description: "OpenWeather.org - API",
+        description: "This Application Uses OpenWeather.org to request forcast information given by the user. The returned json object is then displayed on the page, showing the the current weather as well as a 5 day forcast. Using local storage, previously viewed locations are stored, allowing the user to quickly view a previous location's updated weather. ",
         github: "https://github.com/AZGchip/Forcast_By_Api",
         deployed: "https://azgchip.github.io/Forcast_By_Api/"
     },
@@ -106,9 +99,9 @@ function List() {
                 <div className="col-md">
                     <div className="card-block px-2">
                         
-                        <h4 className="card-title">{list.title}</h4>
-                        <p className="card-text">{list.summary}</p>
-                        
+                        <h2 className="card-title">{list.title}</h2>
+                        <p className="card-text">{list.summary}</p><hr></hr>
+                        <p className="card-text">{list.description} </p>
                     </div>
                 </div>
             </div>
