@@ -3,7 +3,7 @@ import React from "react"
 const listData = [
     {
         id: 1,
-        image: "../assets/images/trales_ales.bmp",
+        image: "assets/images/trales_ales.bmp",
         alt: "Ales and Trails",
         title: "Trails & Ales (Collab) ",
         summary: "A site utilizing web APIs to display the location of trails and breweries around a searched location on an interactive map.",
@@ -35,7 +35,7 @@ const listData = [
     },
     {
         id: 2,
-        image: "../assets/images/hikehire.png",
+        image: "assets/images/hikehire.png",
         alt: "hike hire image",
         title: "Hike Hire (Collab)",
         summary: "A full stack website created to connect hikers with trail guides.",
@@ -72,7 +72,7 @@ const listData = [
     },
     {
         id: 3,
-        image: "../assets/images/forcast.bmp",
+        image: "assets/images/forcast.bmp",
         alt: "Forcast_API",
         title: "Forcast_By_API",
         summary: " A website that displays weather information of a searched location using OpenWeather's API. Previous searches are stored in local storage.",
@@ -82,7 +82,7 @@ const listData = [
     },
     {
         id: 4,
-        image: "../assets/images/password.bmp",
+        image: "assets/images/password.bmp",
         alt: "password photo",
         title: "Password_Generator",
         summary: "A website that creates a random password according to criteria provided by the user.",
@@ -92,7 +92,7 @@ const listData = [
     },
     {
         id:5,
-        image: "../assets/images/schedule.bmp",
+        image: "assets/images/schedule.bmp",
         alt: "schedule photo",
         title: "Schedule_Maker",
         summary: "A day planner website that allows for user input to be saved to local storage under a particular time.",
@@ -102,7 +102,7 @@ const listData = [
     },
     {
         id: 6,
-        image: "../assets/images/burger.bmp",
+        image: "assets/images/burger.bmp",
         alt: "burger photo",
         title: "Eat_Burger",
         summary: `A website that allows burger entries to be created, "eaten", and/or deleted, using a MySQL database to store information.`,
