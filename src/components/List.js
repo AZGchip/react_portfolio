@@ -158,11 +158,11 @@ function List() {
                 <div className="row ">
 
                     <a href="https://www.deviantart.com/azgchip/gallery/"><img className="icons mx-auto"
-                        src="../assets/images/Deviantart-icon.png" alt="Deviantart icon"></img></a>
+                        src="assets/images/Deviantart-icon.png" alt="Deviantart icon"></img></a>
                     <a href="https://soundcloud.com/azgchip"><img className="icons mx-auto"
                         src="assets/images/soundcloud.png" alt="sound cloud icon"></img></a>
                     <a href="https://www.youtube.com/channel/UC42pkrN7h_DRmxSRpjuEsxw?"><img className="icons mx-auto"
-                        src="../assets/images/Media-youtube-icon.png" alt="Youtube icon"></img></a>
+                        src="assets/images/Media-youtube-icon.png" alt="Youtube icon"></img></a>
                     <a href="https://github.com/AZGchip"><img className="icons mx-auto" src="assets/images/git.png"
                         alt="github icon"></img></a>
                     <a href="https://www.linkedin.com/in/andrew-zinski-9761751a1/"><img className="icons mx-auto"
