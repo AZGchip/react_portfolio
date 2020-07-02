@@ -16,4 +16,5 @@ code {
 }
 #root{
   background-image: url("./303.Jpg");
+  background-attachment: fixed;
 }

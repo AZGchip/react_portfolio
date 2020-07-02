@@ -1,7 +1,7 @@
 import React from "react";
 
 const Contact = () => (
-    <div class="container ">
+    <div class="container bg-light" style={{height:"100vh"}}>
         <div class="row">
             <div class="col-md-12 mt-5 pt-5">
                 <h1 class="title1 ">Contact Me</h1>
